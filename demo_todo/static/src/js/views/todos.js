@@ -1,6 +1,6 @@
 /*
  * Component View, display the Todo list,
- * see MarionnetteJS documentation for more details: https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.conpositeview.md
+ * see MarionetteJS documentation for more details: https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.conpositeview.md
  */
 
 openerp.unleashed.module('demo_todo',function(todo, _, Backbone, base){

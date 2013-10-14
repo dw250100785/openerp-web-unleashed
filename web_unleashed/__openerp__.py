@@ -7,7 +7,7 @@
     'description': """
 Core Web Module:
 - improve code architecture and organization
-- add support of Backbone and Marionnette frameworks
+- add support of Backbone and Marionette frameworks
 - native support of JSON-RPC API for Backbone
     """,
     
@@ -104,6 +104,7 @@ Core Web Module:
         'static/src/js/utils/connector.js',
         
         # controller
+        'static/src/js/controller/base.js',
         'static/src/js/controller/pager.js',
         
         # backbone base models

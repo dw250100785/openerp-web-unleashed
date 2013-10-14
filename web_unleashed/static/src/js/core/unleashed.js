@@ -30,8 +30,7 @@
         },
     };
       
-      
-      
+    
     var getModule = function(module_name, base_module){
         var module = null;
         if(this[module_name]){
@@ -47,6 +46,9 @@
             
                 name: module_name,
                 
+                /*
+                 * helpers to organize object in module namespace
+                 */
                 models: function(name, obj){
                     return AttributeAccess.add.apply(this, ['Models', name, obj]);
                 },
@@ -63,6 +65,9 @@
                     return AttributeAccess.add.apply(this, ['Utils', name, obj]);
                 },
                 
+                /*
+                 * deferrer called when OpenERP is ready
+                 */
                 ready: function(call){
                     def.done(call);
                 },
@@ -70,13 +75,37 @@
                 isReady: function(){
                     return def.state() === 'resolved';
                 }, 
+                
+                /*
+                 * register a controller in OpenERP
+                 */
+                register: function(controller){
+                    if(!(controller instanceof LatestBackbone.Marionette.Controller)){
+                        throw new Error('registered controller is not valid, should be an instance of Marionette.Controller');
+                    }
+                    
+                    this.controllers[controller.name] = controller;
+                },
+                
+                controllers: {},
+                
                 // provide OpenERP instance.web object if available
                 web: function(){ return web; }
+                
             }, LatestBackbone.Events);
+            
+            
+            // register all controllers when the module is ready
+            module.ready(function(instance, module, LatestUnderscore, LatestBackbone, base_module){
+                _(module.controllers).each(function(controller){
+                    controller.register(instance, module);
+                });
+            });
             
             openerp[module_name] = function(instance){
                 def.resolveWith(module, [instance, module, LatestUnderscore, LatestBackbone, base_module || null]);
             };
+            
             
             this[module_name] = module;
         }

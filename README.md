@@ -5,7 +5,7 @@ The module is a pure web module with one objective: providing good bases to buil
 
 ## Features
 
-- clear MVC pattern, based on Backbone and Marionnette
+- clear MVC pattern, based on Backbone and Marionette
 - ...and all their relative documentations ! 
 - new namespace to organize and get access to your objects
 - auto-binding of Backbone Model with the OpenERP JSON-RPC API
@@ -186,7 +186,7 @@ next, previous, first, last, select,...
 
 - [Backbone 1.0.0](http://backbonejs.org)
 - [Underscore 1.4.4](http://underscorejs.org)
-- [Marionnette 1.0.0](https://github.com/marionettejs/backbone.marionette/)
+- [Marionette 1.0.0](https://github.com/marionettejs/backbone.marionette/)
 - [MomentJS 2.0.0](http://momentjs.com)
 - [NumeralJS 1.4.9](http://adamwdraper.github.com/Numeral-js/)
 - [Font Awesome 3.2.1](http://fontawesome.io)

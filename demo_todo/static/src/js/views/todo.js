@@ -1,6 +1,6 @@
 /*
  * Item View, display one Todo item,
- * see MarionnetteJS documentation for more details: https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.itemview.md
+ * see MarionetteJS documentation for more details: https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.itemview.md
  */
 openerp.unleashed.module('demo_todo',function(todo, _, Backbone, base){
  

@@ -11,7 +11,7 @@ Demo of a simple todo list, powered by the web unleashed core.
 feature in demo:
 - module initialization
 - data access Backbone and the JSON-RPC API
-- layout definition based on Marionnette
+- layout definition based on Marionette
 - native OpenERP search widget support 
     """,
     
@@ -32,7 +32,7 @@ feature in demo:
         'static/src/js/collections/todos.js',
         'static/src/js/views/todo.js',
         'static/src/js/views/todos.js',
-        'static/src/js/todo.js',
+        'static/src/js/controllers/todo.js',
     ],
     
     'css': [
